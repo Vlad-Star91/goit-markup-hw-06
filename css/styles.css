@@ -142,14 +142,14 @@ img {
   margin-right: 50px;
 }
 
-.site-nav .link {
+.site-nav .link.current {
   position: relative;
   font-family: var(--main-font);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--title-color);
+  color: var(--accent-color);
 
   transition-property: color;
   transition-duration: 250ms;
@@ -162,7 +162,7 @@ img {
   text-decoration: none;
 }
 
-.link-nav .link::after {
+.link-nav .link.current::after {
   content: '';
   display: block;
   width: 100%;
@@ -172,7 +172,7 @@ img {
   position: absolute;
   left: 0;
   bottom: -29px;
-  opacity: 0;
+  opacity: 1;
 
   transition-property: opacity;
   transition-duration: 250ms;
@@ -273,6 +273,7 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-family: var(--main-font);
+  font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
@@ -384,6 +385,7 @@ p {
 
 .label {
   font-family: var(--main-font);
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
@@ -601,6 +603,9 @@ p {
   width: 106px;
   height: 60px;
   fill: var(--social-icons);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link {
@@ -761,8 +766,9 @@ p {
   display: flex;
   width: 200px;
   height: 50px;
-  margin-top: 20px;
+  margin-top: 35px;
   padding-left: 29px;
+  padding-right: 28px;
   color: var(--alt-title-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -846,4 +852,41 @@ p {
   width: 11px;
   height: 11px;
   fill: black;
+}
+
+.form-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.form-modal {
+  display: block;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+.name-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-row input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.name-row textarea {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.submit-button {
+  display: block;
 }

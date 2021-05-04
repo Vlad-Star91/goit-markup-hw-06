@@ -26,7 +26,7 @@
             <span class="logo-color">Web</span>Studio
           </a>
           <ul class="site-nav list">
-            <li class="link-nav"><a class="link" href="">Студия</a></li>
+            <li class="link-nav"><a class="link current" href="">Студия</a></li>
             <li class="link-nav">
               <a class="link" href="./portfolio.html">Портфолио</a>
             </li>
@@ -603,18 +603,18 @@
           </ul>
         </div>
         <div class="footer-subscribe">
-          <form class="" name="subscribe_form" autocomplete="on">
+          <form class="subscribe-block" name="subscribe_form" autocomplete="on">
             <label class="form-title">
               Подпишитесь на рассылку
-             <div class="subscribe-block">
-                <input type="email" name="email" placeholder="E-mail" />
+              <!--<div class="subscribe-block"> -->
+              <input type="email" name="email" placeholder="E-mail" />
             </label>
-            <button class="subscribe-btn" type="subscribe">Подписаться
+            <button class="subscribe-btn" type="submit">
+              Подписаться
               <svg class="subscribe-icon">
-                  <use href="./images/icons/sprite.svg#icon-send"></use>
-                </svg>
+                <use href="./images/icons/sprite.svg#icon-send"></use>
+              </svg>
             </button>
-            </div>
           </form>
         </div>
       </div>
@@ -626,6 +626,46 @@
             <use href="./images/icons/sprite.svg#icon-closebtn"></use>
           </svg>
         </button>
+        <!--Форма модального окна (наполнение)-->
+        <form class="form-modal">
+          <h2>Оставьте свои данные, мы вам перезвоним</h2>
+          <ul class="form-list">
+            <li class="form-item">
+              <label class="name-row">
+                Имя
+                <input type="text" name="name" />
+              </label>
+            </li>
+            <li>
+              <label class="name-row">
+                Номер телефона
+                <input type="tel" name="phone_number" />
+              </label>
+            </li>
+            <li>
+              <label class="name-row">
+                Почта
+                <input type="email" name="email" />
+              </label>
+            </li>
+            <li>
+              <label class="name-row">
+                Комментарий
+                <textarea
+                  name="feedback"
+                  rows="5"
+                  placeholder="Type your message here..."
+                ></textarea>
+              </label>
+            </li>
+          </ul>
+
+          <label>
+            <input type="checkbox" name="accept" value="accept" nochecked />
+            Соглашаюсь с условиями
+          </label>
+          <button class="submin-button" type="submit">Submit</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
