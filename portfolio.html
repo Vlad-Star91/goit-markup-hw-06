@@ -267,6 +267,7 @@
     </main>
 
     <!--Футер-->
+    <!--Футер-->
     <footer class="section footer">
       <div class="container flex-container">
         <div class="footer-contacts">
@@ -339,6 +340,29 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-subscribe">
+          <form
+            class="subscribe-block"
+            name="subscribe_form"
+            autocomplete="off"
+          >
+            <label class="form-title">
+              Подпишитесь на рассылку
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                autocomplete="off"
+              />
+            </label>
+            <button class="subscribe-btn" type="submit">
+              Подписаться
+              <svg class="subscribe-icon">
+                <use href="./images/icons/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
