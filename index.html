@@ -603,10 +603,13 @@
           </ul>
         </div>
         <div class="footer-subscribe">
-          <form class="subscribe-block" name="subscribe_form" autocomplete="on">
+          <form
+            class="subscribe-block"
+            name="subscribe_form"
+            autocomplete="off"
+          >
             <label class="form-title">
               Подпишитесь на рассылку
-              <!--<div class="subscribe-block"> -->
               <input
                 type="email"
                 name="email"
@@ -628,48 +631,74 @@
       <div class="modal">
         <button class="modal-btn" data-modal-close>
           <svg class="modal-btn-icon">
-            <use href="./images/icons/sprite.svg#icon-closebtn"></use>
+            <use href="./images/icons/sprite.svg#icon-vector"></use>
           </svg>
         </button>
         <!--Форма модального окна (наполнение)-->
-        <form class="form-modal">
-          <h2>Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="form-modal" autocomplete="off">
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
           <ul class="form-list">
-            <li class="form-item">
-              <label class="name-row">
+            <li>
+              <label class="field field-list">
                 Имя
-                <input type="text" name="name" />
+                <input
+                  class="text"
+                  type="text"
+                  name="name"
+                  autocomplete="off"
+                />
+                <svg class="form-icon">
+                  <use href="./images/icons/sprite.svg#icon-personForm"></use>
+                </svg>
               </label>
             </li>
             <li>
-              <label class="name-row">
+              <label class="field field-list">
                 Номер телефона
-                <input type="tel" name="phone_number" />
+                <input
+                  class="tel"
+                  type="tel"
+                  name="phone_number"
+                  autocomplete="OFF"
+                />
+                <svg class="form-icon">
+                  <use href="./images/icons/sprite.svg#icon-phoneForm"></use>
+                </svg>
               </label>
             </li>
             <li>
-              <label class="name-row">
+              <label class="field field-list">
                 Почта
-                <input type="email" name="email" />
+                <input class="email" type="email" name="email" />
+                <svg class="form-icon">
+                  <use href="./images/icons/sprite.svg#icon-emailForm"></use>
+                </svg>
               </label>
             </li>
             <li>
-              <label class="name-row">
+              <label class="field">
                 Комментарий
                 <textarea
+                  class="feedback"
                   name="feedback"
                   rows="5"
-                  placeholder="Type your message here..."
+                  placeholder="Введите текст"
                 ></textarea>
               </label>
             </li>
           </ul>
-
-          <label>
-            <input type="checkbox" name="accept" value="accept" nochecked />
-            Соглашаюсь с условиями
+          <label class="checkbox-field">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name="accept"
+              value="accept"
+            />
+            <span class="icon-checkbox"></span>
+            <span class="check-text">Соглашаюсь с рассылкой и принимаю</span>
+            <a class="form-link" href="#">Условия договора</a>
           </label>
-          <button class="submin-button" type="submit">Submit</button>
+          <button class="submit-button" type="submit">Отправить</button>
         </form>
       </div>
     </div>
